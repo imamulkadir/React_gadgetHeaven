@@ -1,0 +1,172 @@
+[
+  {
+    "product_id": "P001",
+    "product_title": "Wireless Noise-Canceling Headphones",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Accessories",
+    "price": 199.99,
+    "description": "Premium over-ear headphones with active noise cancellation and 30-hour battery life.",
+    "Specification": [
+      "Bluetooth 5.2",
+      "30-hour battery life",
+      "USB-C fast charging",
+      "Built-in microphone"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "brand": "SoundMax"
+  },
+  {
+    "product_id": "P002",
+    "product_title": "Portable Bluetooth Speaker",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Accessories",
+    "price": 79.99,
+    "description": "Compact waterproof speaker with deep bass and 12-hour playtime.",
+    "Specification": [
+      "IPX7 waterproof",
+      "12-hour playtime",
+      "360° sound",
+      "USB-C charging"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "brand": "BeatBox"
+  },
+  {
+    "product_id": "P003",
+    "product_title": "Gaming Headset with Surround Sound",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Accessories",
+    "price": 89.99,
+    "description": "Lightweight gaming headset with 7.1 surround sound and noise-canceling mic.",
+    "Specification": [
+      "7.1 Surround Sound",
+      "Noise-canceling mic",
+      "RGB lighting",
+      "USB/3.5mm support"
+    ],
+    "availability": true,
+    "rating": 4.3,
+    "brand": "GamePro"
+  },
+  {
+    "product_id": "P004",
+    "product_title": "Studio Condenser Microphone",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Accessories",
+    "price": 149.99,
+    "description": "Professional-grade microphone for podcasts, vocals, and streaming.",
+    "Specification": [
+      "Cardioid polar pattern",
+      "USB and XLR output",
+      "Shock mount included",
+      "Pop filter"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "VocalEdge"
+  },
+  {
+    "product_id": "P005",
+    "product_title": "True Wireless Earbuds",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Accessories",
+    "price": 129.99,
+    "description": "Compact earbuds with touch controls, wireless charging, and noise cancellation.",
+    "Specification": [
+      "Wireless charging",
+      "Noise cancellation",
+      "Touch controls",
+      "Bluetooth 5.3"
+    ],
+    "availability": false,
+    "rating": 4.4,
+    "brand": "AirSound"
+  },
+  {
+    "product_id": "P006",
+    "product_title": "Hi-Fi Stereo Amplifier",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Accessories",
+    "price": 299.99,
+    "description": "High-fidelity stereo amplifier for audiophiles with premium sound tuning.",
+    "Specification": [
+      "Dual-channel",
+      "Hi-Res Audio certified",
+      "RCA and Optical input",
+      "Aluminum chassis"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "brand": "PureTone"
+  },
+  {
+    "product_id": "P007",
+    "product_title": "4K Ultra HD Smart TV",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Laptops",
+    "price": 549.99,
+    "description": "50-inch 4K smart TV with HDR, voice assistant support, and slim design.",
+    "Specification": [
+      "50-inch display",
+      "4K UHD resolution",
+      "HDR10+",
+      "Wi-Fi and Bluetooth"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "brand": "VisionX"
+  },
+  {
+    "product_id": "P008",
+    "product_title": "Smart Home Security Camera",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Smart Watches",
+    "price": 99.99,
+    "description": "Compact indoor security camera with night vision and motion detection.",
+    "Specification": [
+      "1080p resolution",
+      "Night vision",
+      "Motion alerts",
+      "Cloud storage"
+    ],
+    "availability": false,
+    "rating": 4.2,
+    "brand": "SecureHome"
+  },
+  {
+    "product_id": "P009",
+    "product_title": "Ergonomic Gaming Chair",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "MacBook",
+    "price": 199.99,
+    "description": "Adjustable gaming chair with lumbar support and reclining feature.",
+    "Specification": [
+      "Adjustable height",
+      "Reclining backrest",
+      "PU leather",
+      "Neck pillow"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "SitPro"
+  },
+  {
+    "product_id": "P010",
+    "product_title": "Standing Desk Converter",
+    "product_image": "https://i.ibb.co.com/TfHvmF9/sample.png",
+    "category": "Iphone",
+    "price": 179.99,
+    "description": "Adjustable standing desk converter to improve posture and productivity.",
+    "Specification": [
+      "Height adjustable",
+      "Supports dual monitors",
+      "Steel frame",
+      "Large surface area"
+    ],
+    "availability": true,
+    "rating": 4.4,
+    "brand": "WorkFlex"
+  }
+]
