@@ -15,7 +15,12 @@ const Home = () => {
                 next level. <br />
                 From smart devices to the coolest accessories, we have it all!
               </p>
-              <button className="btn rounded-3xl border-none bg-white p-6 text-xl font-bold text-[#9538E2]">
+              <button
+                onClick={() => {
+                  window.location.href = "#allProducts";
+                }}
+                className="btn rounded-3xl border-none bg-white p-6 text-xl font-bold text-[#9538E2]"
+              >
                 Shop Now
               </button>
             </div>
@@ -31,7 +36,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="mt-4 lg:mt-100">ss</div>
+      <div id="allProducts" className="mt-4 lg:mt-100"></div>
       <Products />
     </div>
   );

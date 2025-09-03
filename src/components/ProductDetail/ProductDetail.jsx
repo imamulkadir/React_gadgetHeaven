@@ -1,19 +1,30 @@
 import React from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
+import { addToStorage, addToWishlist } from "../Utilities/addToDb";
+import { FaArrowLeft } from "react-icons/fa";
 
 const ProductDetail = () => {
   const products = useLoaderData();
   const { product_id } = useParams();
   const product = products.find((product) => product.product_id === product_id);
+  const navigate = useNavigate();
+  const id = product.product_id;
+
   return (
     <div className="relative">
       <div className="bg-[#9538E2]">
-        <div className="hero min-h-[70vh] lg:min-h-[50vh]">
+        {/* back button */}
+        <div className="flex justify-start lg:hidden">
+          <button className="btn btn-ghost" onClick={() => navigate("/")}>
+            <FaArrowLeft className="h-6 w-6" />
+          </button>
+        </div>
+        <div className="hero hidden min-h-[70vh] lg:block lg:min-h-[50vh]">
           <div className="hero-content text-center">
             <div className="mt-6 max-w-md lg:max-w-5xl">
-              <h1 className="-mt-30 text-4xl font-bold lg:-mt-50 lg:text-5xl">
+              <h1 className="text-4xl font-bold lg:text-5xl">
                 Product Details
               </h1>
               <p className="py-6">
@@ -26,19 +37,19 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      <div className="absolute top-50 left-1/2 z-10 hidden h-full -translate-x-1/2 transform overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 backdrop-blur-2xl lg:mx-auto lg:block lg:h-[550px] lg:w-full lg:max-w-5xl">
+      <div className="static z-10 h-full transform overflow-hidden border border-gray-100 bg-white p-6 backdrop-blur-2xl md:absolute lg:top-50 lg:left-1/2 lg:mx-auto lg:block lg:h-[550px] lg:w-full lg:max-w-5xl lg:-translate-x-1/2 lg:rounded-2xl">
         <div className="flex flex-col items-start justify-center gap-4 rounded-lg p-4 lg:flex-row">
           {/* Product Image */}
-          <div className="w-full rounded-2xl bg-gray-100 p-4">
+          <div className="grid w-full place-items-center rounded-2xl bg-gray-100 p-4">
             <img
               src={product.product_image}
               alt={product.product_title}
-              className="z-20 h-20 w-20 rounded-lg object-cover p-2 md:h-auto md:w-full md:rounded-2xl"
+              className="z-20 h-60 w-60 rounded-lg object-cover p-2 md:h-auto md:w-full md:rounded-2xl"
             />
           </div>
 
           {/* Product Details */}
-          <div className="flex w-full flex-col items-center justify-start gap-2 p-4 text-center text-black lg:items-start lg:text-left">
+          <div className="flex w-full flex-col items-start justify-start gap-2 p-4 text-left text-black lg:items-start lg:text-left">
             <h2 className="text-2xl font-bold">{product.product_title}</h2>
             <p className="text-lg font-semibold">Price: ${product.price}</p>
             <p className="text-gray-700">
@@ -86,11 +97,13 @@ const ProductDetail = () => {
             <div className="my-2 flex items-center gap-2">
               <button
                 type="button"
-                class="btn cursor-pointer rounded-3xl border-none bg-[#9538E2] p-6 text-lg font-medium text-white"
+                className="btn cursor-pointer rounded-3xl border-none bg-[#9538E2] p-6 text-lg font-medium text-white"
+                onClick={() => addToStorage(id)}
               >
                 Add to Cart
               </button>
               <button
+                onClick={() => addToWishlist(id)}
                 type="button"
                 className="aspect-square cursor-pointer items-center justify-center rounded-full border border-gray-400 bg-transparent p-3 text-black hover:border-[#9538E2] hover:text-[#9538E2]"
               >

@@ -23,6 +23,7 @@ const Statistics = () => {
 
   return (
     <div className="flex flex-col justify-center">
+      {/* Header Section */}
       <div className="flex flex-col items-center gap-2 bg-[#9538E2] p-4 pb-10">
         <h2 className="text-3xl font-bold text-white">Statistics</h2>
         <p className="max-w-xl text-center text-sm text-gray-100">
@@ -31,39 +32,44 @@ const Statistics = () => {
         </p>
       </div>
 
+      {/* Chart Section */}
       <div className="flex flex-col items-center justify-center rounded-b-lg bg-white p-4">
-        <h2 className="my-4 text-2xl font-bold text-black">
+        <h2 className="my-4 text-xl font-bold text-black lg:text-2xl">
           Analysis of Products Price
         </h2>
-        <ResponsiveContainer width="60%" height={400}>
-          <ComposedChart
-            data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
+        <div className="w-full lg:w-3/5">
+          {" "}
+          {/* Responsive width container */}
+          <ResponsiveContainer width="100%" height={400}>
+            <ComposedChart
+              data={data}
+              margin={{
+                top: 5,
+                right: 0,
+                left: 0,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
 
-            {/* Bar Layer */}
-            <Bar dataKey="price" barSize={40} fill="#8884d8" />
+              {/* Bar Layer */}
+              <Bar dataKey="price" barSize={40} fill="#8884d8" />
 
-            {/* Area Layer */}
-            <Area
-              type="monotone"
-              dataKey="price"
-              stroke="#9538E2"
-              fill="#9538E2"
-              fillOpacity={0.2}
-            />
-          </ComposedChart>
-        </ResponsiveContainer>
+              {/* Area Layer */}
+              <Area
+                type="monotone"
+                dataKey="price"
+                stroke="#9538E2"
+                fill="#9538E2"
+                fillOpacity={0.2}
+              />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );
